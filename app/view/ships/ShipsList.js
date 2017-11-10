@@ -20,6 +20,6 @@ Ext.define('LearnExt.view.ships.ShipsList', {
     ,
 
     listeners: {
-        celldblclick: 'onPopupForm'
+        celldblclick: 'openWindow'
     }
 });

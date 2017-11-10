@@ -3,9 +3,9 @@ Ext.define('Latest.view.ships.ShipWindowController', {
 
     alias: 'controller.windowShip',
 
-    onPopupForm: function (sender, record) {
+    openWindow: function (sender, record) {
         this.windowShip = Ext.create('Latest.view.ships.ShipWindow');
-        this.windowShip = Ext.create('Latest.view.ships.ShipWindow');
+        this.windowShip.rec=record;
         this.windowShip.show();
     },
 

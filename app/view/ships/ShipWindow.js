@@ -7,16 +7,22 @@ Ext.define('Latest.view.ships.ShipWindow', {
     centered: true,
     modal: true,
     name: 'shipWindow',
+
+    // bind:{
+    //     store:'{ships}',
+    //     selection:'{users}'
+    // },
+
     items: [{
         xtype: 'textfield',
         name: 'ship_name',
         fieldLabel: 'Name of ship',
-        bind: '{ship.ship_name}'
+        bind: '{rec.ship_name}'
     }, {
         xtype: 'textfield',
         name: 'ship_name',
         fieldLabel: 'ship_name',
-        bind: '{ship_name}'
+        bind: '{users.ship_flag}'
 
     }, {
         xtype: 'toolbar',
@@ -25,12 +31,12 @@ Ext.define('Latest.view.ships.ShipWindow', {
             xtype: 'button',
             text: 'Submit',
             iconCls: 'x-fa fa-check',
-            handler: 'submitUpdate'
+            // handler: 'submitUpdate'
         }, {
             xtype: 'button',
             text: 'Cancel',
             iconCls: 'x-fa fa-close',
-            // handler: 'cancelUpdate'
+            handler: 'cancelUpdate'
         }]
     }]
 });
