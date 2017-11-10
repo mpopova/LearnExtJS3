@@ -1,0 +1,13 @@
+/build
+/ext
+/.sencha
+/bootstrap.*
+/sass
+/nbproject/private/
+/nbproject/*
+/nbproject
+.DS_Store
+*.log
+.idea
+classic.json
+classic.jsonp
