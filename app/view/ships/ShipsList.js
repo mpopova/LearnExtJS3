@@ -1,7 +1,4 @@
-/**
- * This view is an example list of people.
- */
-Ext.define('LearnExt.view.main.ShipList', {
+Ext.define('LearnExt.view.ships.ShipsList', {
     extend: 'Ext.grid.Panel',
     xtype: 'shipList',
 
