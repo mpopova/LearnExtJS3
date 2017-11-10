@@ -1,15 +1,15 @@
 /**
  * This view is an example list of people.
  */
-Ext.define('LearnExt.view.main.List', {
+Ext.define('LearnExt.view.heroes.HeroesList', {
     extend: 'Ext.grid.Panel',
-    xtype: 'mainlist',
+    xtype: 'heroesList',
 
     requires: [
         'LearnExt.store.Personnel'
     ],
 
-    title: 'Personnel',
+    title: 'Heroes',
 
     store: {
         type: 'personnel'

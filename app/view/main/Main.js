@@ -15,7 +15,7 @@ Ext.define('LearnExt.view.main.Main', {
 
         'LearnExt.view.main.MainController',
         'LearnExt.view.main.MainModel',
-        'LearnExt.view.main.List',
+        'LearnExt.view.heroes.HeroesList',
 
     ],
 
@@ -85,11 +85,11 @@ Ext.define('LearnExt.view.main.Main', {
             }]
         },
         {
-            title: 'Home',
-            iconCls: 'fa-home',
+            title: 'Heroes',
+            iconCls: 'fa-user',
             // The following grid shares a store with the classic version's grid as well!
             items: [{
-                xtype: 'mainlist'
+                xtype: 'heroesList'
             }]
     }]
 });

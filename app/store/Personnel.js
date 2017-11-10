@@ -16,4 +16,7 @@ Ext.define('LearnExt.store.Personnel', {
             read: 'QueryDatabase.getResults',
         }
     },
+
+    autoLoad: true
+
 });
