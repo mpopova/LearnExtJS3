@@ -1,7 +1,7 @@
-Ext.define('LearnExt.store.Personnel', {
+Ext.define('LearnExt.store.Hero', {
     extend: 'Ext.data.Store',
 
-    alias: 'store.personnel',
+    alias: 'store.heroesStore',
 
     fields: [
         'name', 'email', 'phone'

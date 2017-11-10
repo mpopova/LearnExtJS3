@@ -6,13 +6,13 @@ Ext.define('LearnExt.view.heroes.HeroesList', {
     xtype: 'heroesList',
 
     requires: [
-        'LearnExt.store.Personnel'
+        'LearnExt.store.Hero'
     ],
 
     title: 'Heroes',
 
     store: {
-        type: 'personnel'
+        type: 'heroesStore'
     },
 
     columns: [
