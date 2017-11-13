@@ -12,7 +12,9 @@ Ext.define('LearnExt.view.main.Main', {
         'LearnExt.view.ships.ShipsList',
 
         'Latest.view.ships.ShipWindow',
-        'Latest.view.ships.ShipWindowController'
+        'Latest.view.ships.ShipWindowController',
+
+        'LearnExt.view.tree.Tree'
     ],
 
     controller: 'main',
@@ -73,6 +75,13 @@ Ext.define('LearnExt.view.main.Main', {
     },
 
     items: [
+        {
+            title: 'Tree',
+            iconCls: 'fa-tree',
+            items: [{
+                xtype: 'treeList'
+            }]
+        },
         {
             title: 'Ships',
             iconCls: 'fa-ship',
