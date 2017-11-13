@@ -11,5 +11,5 @@ Ext.define('LearnExt.view.tree.Tree', {
         type: 'treeStore'
     },
     rootVisible: false,
-    renderTo: Ext.getBody()
+
 });

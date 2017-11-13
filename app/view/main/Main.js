@@ -14,7 +14,9 @@ Ext.define('LearnExt.view.main.Main', {
         'Latest.view.ships.ShipWindow',
         'Latest.view.ships.ShipWindowController',
 
-        'LearnExt.view.tree.Tree'
+        'LearnExt.view.tree.Tree',
+
+        'LearnExt.view.components.ComponentCustom'
     ],
 
     controller: 'main',
@@ -59,6 +61,23 @@ Ext.define('LearnExt.view.main.Main', {
     },
 
     items: [
+        {
+            title: 'Component',
+            iconCls: 'fa-building',
+            // xtype: 'componentCustom'
+            // items: [{
+            //     xtype: 'componentCustom'
+            // }]
+            layout: {
+                type: 'hbox',
+            },
+            items: [
+                {
+                    xtype: 'splitbutton',
+                    text: 'Navigation component - Toolbar'
+                }
+            ]
+        },
         {
             title: 'Tree',
             iconCls: 'fa-tree',
