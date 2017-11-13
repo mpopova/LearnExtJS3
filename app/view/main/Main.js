@@ -22,23 +22,7 @@ Ext.define('LearnExt.view.main.Main', {
     viewModel: 'main',
     ui: 'navigation',
 
-    tabBarHeaderPosition: 1,
-    titleRotation: 0,
-    tabRotation: 0,
-
-    header: {
-        layout: {
-            align: 'stretchmax'
-        },
-        title: {
-            bind: {
-                text: '{name}'
-            },
-            flex: 0
-        },
-        iconCls: 'fa-th-list'
-    },
-
+    tabPosition: 'top',
     tabBar: {
         flex: 1,
         layout: {
