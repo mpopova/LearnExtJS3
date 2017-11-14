@@ -29,10 +29,13 @@ Ext.define('Latest.view.ships.ShipWindowController', {
 
         shipNameValue = Ext.getCmp('shipName').getValue();
         shipTypeValue = Ext.getCmp('shipType').getValue();
-        // this.getViewModel();
-        // console.log(this.getViewModel());
+        this.getViewModel().data;
+        console.log(this.getViewModel().data);
+
+console.log(this);
+        // this.store.getProxy().getWriter().writeAllFields = pressed;
+
         // console.log(record);
-        // console.log(shipNameValue  +  shipTypeValue);
     }
 
 });
