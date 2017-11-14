@@ -29,7 +29,9 @@ Ext.define('Latest.view.ships.ShipWindowController', {
 
         shipNameValue = Ext.getCmp('shipName').getValue();
         shipTypeValue = Ext.getCmp('shipType').getValue();
-
+        // this.getViewModel();
+        // console.log(this.getViewModel());
+        // console.log(record);
         // console.log(shipNameValue  +  shipTypeValue);
     }
 
