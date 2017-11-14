@@ -7,16 +7,17 @@ Ext.define('Latest.view.ships.ShipWindow', {
     centered: true,
     modal: true,
     name: 'shipWindow',
+    // reference: 'shipWindow'
 
-    require: [
-        'LearnExt.view.ships.TestViewModel'
-    ],
+    // require: [
+    //     'LearnExt.view.ships.TestViewModel'
+    // ],
        
 
     viewModel: {
         type: 'test'
     },
-    
+
     // bind:{
     //     data: {
     //        record: '{data}'

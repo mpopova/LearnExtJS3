@@ -4,6 +4,7 @@ Ext.define('LearnExt.view.ships.TestViewModel', {
     alias: 'viewmodel.test',
 
     data:{
-        firstName: 'John'
+        firstName: 'John',
+        shipName: 'neshto'
     }
 });

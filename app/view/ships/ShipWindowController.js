@@ -4,25 +4,18 @@ Ext.define('Latest.view.ships.ShipWindowController', {
     alias: 'controller.windowShip',
 
     openWindow: function (sender, record) {
-        var grid = sender.up('grid');
-        var selectedRow = grid.getSelectionModel().getSelection()[0];
-        var record1 = selectedRow.data;
+        var grid = sender.up('grid'),
+            selectedRow = grid.getSelectionModel().getSelection()[0],
+            record1 = selectedRow.data,
+            windowViewModel;
 
-        var viewModel = Ext.create('LearnExt.view.ships.TestViewModel',{
-            config: {
-                data:{
-                    shipName: record1.ship_name
-                }
-            },
-            data:{
-                shipName: record1.ship_name
-            }
-        });
+        console.log(this.getViewModel());
 
         this.windowShip = Ext.create('Latest.view.ships.ShipWindow');
 
-        console.log(viewModel);
-
+        windowViewModel = this.windowShip.getViewModel();
+        windowViewModel.set('shipName', record1.ship_name);
+        
         this.windowShip.show();
     },
 
