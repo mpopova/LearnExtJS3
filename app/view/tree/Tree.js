@@ -1,6 +1,8 @@
 Ext.define('LearnExt.view.tree.Tree', {
     extend: 'Ext.tree.Panel',
     xtype: 'treeList',
+    controller: 'treeController',
+
     requires: [
         'LearnExt.store.TreeStore'
     ],
@@ -12,4 +14,8 @@ Ext.define('LearnExt.view.tree.Tree', {
     },
     rootVisible: false,
 
+    listeners: {
+        select: 'showTreeInfo'
+    }
 });
+

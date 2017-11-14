@@ -15,6 +15,7 @@ Ext.define('LearnExt.view.main.Main', {
         'Latest.view.ships.ShipWindowController',
 
         'LearnExt.view.tree.Tree',
+        'LearnExt.view.tree.TreeController',
 
         'LearnExt.view.components.ComponentCustom'
     ],
