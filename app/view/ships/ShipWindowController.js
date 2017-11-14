@@ -4,26 +4,25 @@ Ext.define('Latest.view.ships.ShipWindowController', {
     alias: 'controller.windowShip',
 
     openWindow: function (sender, record) {
-
-        // this.windowShip.rec=record;
-        // console.log(record);
-        // console.log(sender);
-
-        // var row = userGrid.getSelectionModel().getSelection()[0];
-        // console.log(row.get('dni'))
-
         var grid = sender.up('grid');
-        console.log(grid);
         var selectedRow = grid.getSelectionModel().getSelection()[0];
-        // console.log(selectedRow.data);
-        record = selectedRow.data;
-        // console.log(record.ship_name);
-        // console.log(record);
-        // this.windowShip.record = record;
-        console.log(record);
-        this.windowShip='';
-        this.windowShip.record = record;
+        var record1 = selectedRow.data;
+
+        var viewModel = Ext.create('LearnExt.view.ships.TestViewModel',{
+            config: {
+                data:{
+                    shipName: record1.ship_name
+                }
+            },
+            data:{
+                shipName: record1.ship_name
+            }
+        });
+
         this.windowShip = Ext.create('Latest.view.ships.ShipWindow');
+
+        console.log(viewModel);
+
         this.windowShip.show();
     },
 
