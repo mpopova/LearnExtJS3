@@ -4,6 +4,7 @@ Ext.define('Latest.view.ships.ShipWindowController', {
     alias: 'controller.windowShip',
 
     openWindow: function (sender, record) {
+        // console.log(sender.up());
         var grid = sender.up('grid'),
             selectedRow = grid.getSelectionModel().getSelection()[0],
             record1 = selectedRow.data,
@@ -22,9 +23,14 @@ Ext.define('Latest.view.ships.ShipWindowController', {
         sender.up('window[name=shipWindow]').close();
     },
 
-    onConfirm: function (choice) {
-        if (choice === 'yes') {
-            //
-        }
+    submitUpdate: function (sender, record) {
+        var shipNameValue,
+            shipTypeValue;
+
+        shipNameValue = Ext.getCmp('shipName').getValue();
+        shipTypeValue = Ext.getCmp('shipType').getValue();
+
+        // console.log(shipNameValue  +  shipTypeValue);
     }
+
 });
