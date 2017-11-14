@@ -7,22 +7,10 @@ Ext.define('Latest.view.ships.ShipWindow', {
     centered: true,
     modal: true,
     name: 'shipWindow',
-    // reference: 'shipWindow'
-
-    // require: [
-    //     'LearnExt.view.ships.TestViewModel'
-    // ],
-       
 
     viewModel: {
-        type: 'test'
+        type: 'windowShipInfo'
     },
-
-    // bind:{
-    //     data: {
-    //        record: '{data}'
-    //     }
-    // },
 
     items: [{
         xtype: 'textfield',
@@ -31,9 +19,9 @@ Ext.define('Latest.view.ships.ShipWindow', {
         bind: '{shipName}'
     }, {
         xtype: 'textfield',
-        name: 'ship_name',
-        fieldLabel: 'ship_name',
-        bind: '{firstName}'
+        name: 'ship_type',
+        fieldLabel: 'Type of ship',
+        bind: '{shipType}'
     }, {
         xtype: 'toolbar',
         docked: 'bottom',

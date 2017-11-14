@@ -11,7 +11,7 @@ Ext.define('LearnExt.view.main.Main', {
         'LearnExt.view.heroes.HeroesList',
         'LearnExt.view.ships.ShipsList',
 
-        'LearnExt.view.ships.TestViewModel',
+        'LearnExt.view.ships.WindowShipInfoViewModel',
 
         'Latest.view.ships.ShipWindow',
         'Latest.view.ships.ShipWindowController',
@@ -68,10 +68,6 @@ Ext.define('LearnExt.view.main.Main', {
         {
             title: 'Component',
             iconCls: 'fa-building',
-            // xtype: 'componentCustom'
-            // items: [{
-            //     xtype: 'componentCustom'
-            // }]
             layout: {
                 type: 'hbox',
             },
