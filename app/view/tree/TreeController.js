@@ -4,22 +4,31 @@ Ext.define('LearnExt.view.tree.TreeController', {
     alias: 'controller.treeController',
 
     showTreeInfo: function (sender, record) {
+        var dataForTmp = {
+            infoName: record.data.text,
+            // infoType: 'Sencha Inc',
+        };
+
         if(this.currentInfo){
            Ext.getCmp('detailInfo').destroy();
         };
 
-        this.currentInfo = Ext.create('Ext.Component',{
+        this.currentInfo = Ext.create('Ext.panel.Panel',{
+            id: 'detailInfo',
             renderTo: 'panel-1013-innerCt',
             frame: true,
             floating: true,
-            title: 'Here',
-            width: 580,
-            height: 100,
-            layout: 'border',
-            xtype: 'textfield',
-            id: 'detailInfo',
+            title: 'Additional info',
+            width: 400,
+            height: 200,
             region: 'center',
-            html: record.data.text
+
+            tpl: [
+                '<p>Name: {infoName}</p>',
+                // '<p>Type: {infoType}</p>',
+            ]
         })
+
+        this.currentInfo.update(dataForTmp);
     }
 });
