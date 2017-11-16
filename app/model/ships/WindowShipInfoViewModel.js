@@ -1,4 +1,4 @@
-Ext.define('LearnExt.view.ships.WindowShipInfoViewModel', {
+Ext.define('LearnExt.model.ships.WindowShipInfoViewModel', {
     extend: 'Ext.app.ViewModel',
 
     alias: 'viewmodel.windowShipInfo',

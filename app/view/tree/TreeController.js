@@ -12,7 +12,7 @@ Ext.define('LearnExt.view.tree.TreeController', {
            Ext.getCmp('detailInfo').destroy();
         };
 
-        this.currentInfo = Ext.create('LearnExt.view.tree.TreeAdditionalInfoModel');
+        this.currentInfo = Ext.create('LearnExt.model.tree.TreeAdditionalInfoModel');
         
         this.currentInfo.update(dataForTmp);
     }

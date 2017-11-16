@@ -1,4 +1,4 @@
-Ext.define('LearnExt.view.tree.TreeAdditionalInfoModel', {
+Ext.define('LearnExt.model.tree.TreeAdditionalInfoModel', {
     extend: 'Ext.panel.Panel',
 
     id: 'detailInfo',
