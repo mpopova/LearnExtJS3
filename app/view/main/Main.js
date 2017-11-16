@@ -86,6 +86,7 @@ Ext.define('LearnExt.view.main.Main', {
         {
             title: 'Tree',
             iconCls: 'fa-tree',
+            id: 'mainTree',
             items: [{
                 xtype: 'treeList'
             }]

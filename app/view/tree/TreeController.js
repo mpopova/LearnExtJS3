@@ -6,7 +6,6 @@ Ext.define('LearnExt.view.tree.TreeController', {
     showTreeInfo: function (sender, record) {
         var dataForTmp = {
             infoName: record.data.text,
-            // infoType: 'Sencha Inc',
         };
 
         if(this.currentInfo){
@@ -15,7 +14,7 @@ Ext.define('LearnExt.view.tree.TreeController', {
 
         this.currentInfo = Ext.create('Ext.panel.Panel',{
             id: 'detailInfo',
-            renderTo: 'panel-1013-innerCt',
+            renderTo: 'mainTree',
             frame: true,
             floating: true,
             title: 'Additional info',
@@ -25,10 +24,9 @@ Ext.define('LearnExt.view.tree.TreeController', {
 
             tpl: [
                 '<p>Name: {infoName}</p>',
-                // '<p>Type: {infoType}</p>',
             ]
         })
-
+        
         this.currentInfo.update(dataForTmp);
     }
 });
