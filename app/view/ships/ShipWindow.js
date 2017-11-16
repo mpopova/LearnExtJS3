@@ -1,4 +1,4 @@
-Ext.define('Latest.view.ships.ShipWindow', {
+Ext.define('LearnExt.view.ships.ShipWindow', {
     extend:'Ext.window.Window',
     controller: 'windowShip',
     // id:'updateShip',

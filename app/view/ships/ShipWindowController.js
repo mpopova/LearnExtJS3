@@ -1,4 +1,4 @@
-Ext.define('Latest.view.ships.ShipWindowController', {
+Ext.define('LearnExt.view.ships.ShipWindowController', {
     extend: 'Ext.app.ViewController',
 
     alias: 'controller.windowShip',
@@ -10,7 +10,7 @@ Ext.define('Latest.view.ships.ShipWindowController', {
             record1 = selectedRow.data,
             windowViewModel;
 
-        this.windowShip = Ext.create('Latest.view.ships.ShipWindow');
+        this.windowShip = Ext.create('LearnExt.view.ships.ShipWindow');
 
         windowViewModel = this.windowShip.getViewModel();
         windowViewModel.set('shipName', record1.ship_name);

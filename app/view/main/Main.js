@@ -6,21 +6,21 @@ Ext.define('LearnExt.view.main.Main', {
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
 
-        'LearnExt.view.main.MainController',
-        'LearnExt.view.main.MainModel',
-        'LearnExt.view.heroes.HeroesList',
-        'LearnExt.view.ships.ShipsList',
-
+        'LearnExt.model.main.MainModel',
         'LearnExt.model.ships.WindowShipInfoViewModel',
 
-        'Latest.view.ships.ShipWindow',
-        'Latest.view.ships.ShipWindowController',
+        'LearnExt.view.main.MainController',
+
+        'LearnExt.view.heroes.HeroesList',
+
+        'LearnExt.view.ships.ShipsList',
+        'LearnExt.view.ships.ShipWindow',
+        'LearnExt.view.ships.ShipWindowController',
 
         'LearnExt.view.tree.Tree',
         'LearnExt.view.tree.TreeController',
 
         'LearnExt.view.components.ComponentCustom'
-
     ],
 
     controller: 'main',
