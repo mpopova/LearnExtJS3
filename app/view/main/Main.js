@@ -69,12 +69,17 @@ Ext.define('LearnExt.view.main.Main', {
             title: 'Component',
             iconCls: 'fa-building',
             layout: {
-                type: 'hbox',
+                type: 'vbox',
             },
             items: [
                 {
                     xtype: 'splitbutton',
                     text: 'Navigation component - Toolbar'
+                },
+                {
+                    xtype: 'combo',
+                    fieldLabel: 'Choose state',
+                    margin: 30
                 }
             ]
         },
