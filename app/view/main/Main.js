@@ -20,7 +20,9 @@ Ext.define('LearnExt.view.main.Main', {
         'LearnExt.view.tree.Tree',
         'LearnExt.view.tree.TreeController',
 
-        'LearnExt.view.components.ComponentCustom'
+        'LearnExt.view.components.ComponentCustom',
+
+        'LearnExt.view.PanelForm'
     ],
 
     controller: 'main',
@@ -65,6 +67,10 @@ Ext.define('LearnExt.view.main.Main', {
     },
 
     items: [
+        {
+            xtype: 'panelForm',
+            iconCls: 'fa-tasks',
+        },
         {
             title: 'Component',
             iconCls: 'fa-building',
