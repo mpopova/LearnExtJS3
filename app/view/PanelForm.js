@@ -24,12 +24,16 @@ Ext.define('LearnExt.view.PanelForm', {
         fieldLabel: 'Last Name',
         bind: '{lastName}'
     },
-    ,{
-        type: 'textfield',
+    {
+        xtype: 'textfield',
         readOnly: true,
         disabled: true,
         fieldLabel: 'FullName',
-        bind: '{name}'
+        bind: '{name:capitalize}'
+    },
+    {
+        xtype: 'checkbox',
+        boxLabel: 'Is Admin'
     },
     {
         xtype: 'button',
