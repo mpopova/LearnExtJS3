@@ -22,7 +22,8 @@ Ext.define('LearnExt.view.main.Main', {
 
         'LearnExt.view.components.ComponentCustom',
 
-        'LearnExt.view.PanelForm'
+        'LearnExt.view.PanelForm',
+        'LearnExt.view.TabPanel'
     ],
 
     controller: 'main',
@@ -67,6 +68,10 @@ Ext.define('LearnExt.view.main.Main', {
     },
 
     items: [
+        {
+            xtype: 'tabPanel',
+            iconCls: 'fa-column',
+        },
         {
             xtype: 'panelForm',
             iconCls: 'fa-tasks',
