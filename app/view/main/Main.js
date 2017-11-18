@@ -69,8 +69,15 @@ Ext.define('LearnExt.view.main.Main', {
 
     items: [
         {
+            title: 'Ships',
+            iconCls: 'fa-ship',
+            items: [{
+                xtype: 'shipList'
+            }]
+        },
+        {
             xtype: 'tabPanel',
-            iconCls: 'fa-column',
+            iconCls: 'fa-table',
         },
         {
             xtype: 'panelForm',
@@ -100,13 +107,6 @@ Ext.define('LearnExt.view.main.Main', {
             id: 'mainTree',
             items: [{
                 xtype: 'treeList'
-            }]
-        },
-        {
-            title: 'Ships',
-            iconCls: 'fa-ship',
-            items: [{
-                xtype: 'shipList'
             }]
         },
         {

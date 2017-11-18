@@ -5,7 +5,7 @@ Ext.define('LearnExt.store.Ship', {
     autoSync : true,
     
     fields: [
-        'ship_name', 'ship_type', 'ship_flag'
+        'ship_id','ship_name', 'ship_type', 'ship_flag'
     ],
 
     proxy: {

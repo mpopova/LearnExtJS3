@@ -13,6 +13,7 @@ Ext.define('LearnExt.view.ships.ShipsList', {
     },
 
     columns: [
+        { text: 'Id', dataIndex: 'ship_id'},
         { text: 'Name',  dataIndex: 'ship_name' },
         { text: 'Type', dataIndex: 'ship_type', flex: 1 },
         { text: 'Flag', dataIndex: 'ship_flag', flex: 1 }
