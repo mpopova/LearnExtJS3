@@ -1,6 +1,7 @@
 Ext.define('LearnExt.store.Ship', {
     extend: 'Ext.data.Store',
 
+    storeId: 'shipsStore',
     alias: 'store.ships',
     autoSync : true,
     
@@ -19,7 +20,8 @@ Ext.define('LearnExt.store.Ship', {
         },
         api: {
             read: 'QueryDatabase.getResultsShips',
-            update: 'QueryDatabase.updateShips'
+            update: 'QueryDatabase.updateShips',
+            write: 'QueryDatabase.addShips'
         }
     },
 

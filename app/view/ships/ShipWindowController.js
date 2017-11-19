@@ -25,56 +25,11 @@ Ext.define('LearnExt.view.ships.ShipWindowController', {
 
     submitUpdate: function (sender, record) {
         var shipNameValue,
-            shipTypeValue;
-
-        shipNameValue = Ext.getCmp('shipName').getValue();
-        shipTypeValue = Ext.getCmp('shipType').getValue();
-        this.getViewModel().data;
-
-        // var win = button.up('window');
-        // var form = win.down('form');        
-        // var record = form.getRecord();
-        // record.set(form.getValues());
-
-        // this.getUsrDataStoreStore().update(record);
+            shipTypeValue,
+            shipsStore = Ext.data.StoreManager.lookup('shipsStore');
 
 
-        // console.log(this.getViewModel().data);
-
-        //   this.getViewModel().set('shipName', this.getViewModel().data.shipName);
-        //   console.log(this.getViewModel());
-
-        // console.log(record);
-
-
-        var user = Ext.create('LearnExt.store.Ship', {
-            shipName: shipNameValue,
-            shipType: shipTypeValue
-        });
-
-        // var updatedValues = this.getViewModel().set({
-        //      shipName: shipNameValue,
-        //      shipType: shipTypeValue
-        //  });
-
-         console.log(user);
-
-        user.save();
-
-
-
-        user.load(1, {
-             success: function(user) {
-                  console.log(user.getId()); //logs 123
-             }
-         });
-
-         // console.log(this.getViewModel());
-
-// console.log(this);
-        // this.store.getProxy().getWriter().writeAllFields = pressed;
-
-        // console.log(record);
+        shipsStore.update({records: this.getViewModel().data});
     }
 
 });
