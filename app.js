@@ -9,7 +9,15 @@ Ext.application({
     extend: 'LearnExt.Application',
 
     requires: [
-        'LearnExt.view.main.Main'
+        'LearnExt.view.main.Main',
+        'Ext',
+        'Ext.Base',
+        'Ext.app.*',
+        'Ext.state.*',
+        'Ext.direct.*',
+        'Ext.data.*',
+        'Ext.Loader',
+        'Ext.util.*'
     ],
 
     // The name of the initial view to create. With the classic toolkit this class

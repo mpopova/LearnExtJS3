@@ -1,9 +1,9 @@
 Ext.define('LearnExt.store.Ship', {
     extend: 'Ext.data.Store',
-
+    // override: 'Ext.data.proxy.Direct',
     storeId: 'shipsStore',
     alias: 'store.ships',
-    autoSync : true,
+    // autoSync : true,
     
     fields: [
         'ship_id','ship_name', 'ship_type', 'ship_flag'
@@ -15,9 +15,10 @@ Ext.define('LearnExt.store.Ship', {
             rootProperty: 'ships'
         },
         writer: {
-            writeAllFields: false,
-            rootProperty: 'ships'
+            type: 'json',
+            rootProperty: 'data'
         },
+        
         api: {
             read: 'QueryDatabase.getResultsShips',
             update: 'QueryDatabase.updateShips',
@@ -26,5 +27,6 @@ Ext.define('LearnExt.store.Ship', {
     },
 
     autoLoad: true
+    
 
 });

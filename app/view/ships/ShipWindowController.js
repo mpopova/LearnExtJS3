@@ -24,12 +24,27 @@ Ext.define('LearnExt.view.ships.ShipWindowController', {
     },
 
     submitUpdate: function (sender, record) {
+
+       // var active = this.activeRecord,
+   // console.log(record);
+
         var shipNameValue,
             shipTypeValue,
-            shipsStore = Ext.data.StoreManager.lookup('shipsStore');
+            shipsStore = Ext.getStore('shipsStore');
+            // console.log(shipsStore);
+
+// Ext.JSON.decode(): You're trying to decode an invalid JSON String: object(stdClass)#2 (0)
+
+            console.log(Ext.data.StoreManager.lookup('shipsStore').data);
 
 
-        shipsStore.update({records: this.getViewModel().data});
+            console.log(this.getViewModel().data);
+
+
+
+            dataForUpdate = this.getViewModel().data; //object
+
+            QueryDatabase.updateShips(this.getViewModel().data);
     }
 
 });

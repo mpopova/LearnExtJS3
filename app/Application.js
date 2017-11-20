@@ -8,6 +8,18 @@ Ext.define('LearnExt.Application', {
 
     name: 'LearnExt',
 
+
+    // requires:[
+    //     'Ext',
+    //     'Ext.Base',
+    //     'Ext.app.*',
+    //     'Ext.state.*',
+    //     'Ext.direct.*',
+    //     'Ext.data.*',
+    //     'Ext.Loader',
+    //     'Ext.util.*'
+    // ],
+
     quickTips: false,
     platformConfig: {
         desktop: {
