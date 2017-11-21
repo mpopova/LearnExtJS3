@@ -71,17 +71,17 @@ Ext.define('LearnExt.view.main.Main', {
 
     items: [
         {
-            title: 'Simpsons',
-            iconCls: 'fa-pencil-square-o',
-            items: [{
-                xtype: 'simpsonList'
-            }]
-        },
-        {
             title: 'Ships',
             iconCls: 'fa-ship',
             items: [{
                 xtype: 'shipList'
+            }]
+        },
+        {
+            title: 'Simpsons',
+            iconCls: 'fa-pencil-square-o',
+            items: [{
+                xtype: 'simpsonList'
             }]
         },
         {

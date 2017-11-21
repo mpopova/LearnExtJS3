@@ -22,5 +22,9 @@ Ext.define('LearnExt.view.ships.ShipsList', {
 
     listeners: {
         celldblclick: 'openWindow'
+        // ,
+        // afterrender: 'afterRender'
     }
 });
+
+

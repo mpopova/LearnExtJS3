@@ -23,14 +23,22 @@ Ext.define('LearnExt.view.ships.ShipWindowController', {
         sender.up('window[name=shipWindow]').close();
     },
 
+    // afterRender: function(grid){
+    //     debugger;
+    // },
+
     submitUpdate: function (sender, record) {
 
-        // var shipsStore = Ext.getStore('shipsStore');
+        var shipsStore = Ext.getStore('shipsStore');
         // var shipsStoreOtherWay  = Ext.data.StoreManager.lookup('shipsStore');
 
         dataForUpdate = this.getViewModel().data; //object
         console.log(dataForUpdate);
         QueryDatabase.updateShips(dataForUpdate);
+
+        shipsStore.load();
+
+        sender.up('window[name=shipWindow]').close();
     }
 
 });
