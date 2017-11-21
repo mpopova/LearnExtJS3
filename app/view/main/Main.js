@@ -5,8 +5,6 @@ Ext.define('LearnExt.view.main.Main', {
     requires: [
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
-        
-        // 'Ext.data.proxy.Direct',
 
         'LearnExt.model.main.MainModel',
         'LearnExt.model.ships.WindowShipInfoViewModel',

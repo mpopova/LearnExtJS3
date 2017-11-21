@@ -1,9 +1,7 @@
 Ext.define('LearnExt.store.Ship', {
     extend: 'Ext.data.Store',
-    // override: 'Ext.data.proxy.Direct',
     storeId: 'shipsStore',
     alias: 'store.ships',
-    // autoSync : true,
     
     fields: [
         'ship_id','ship_name', 'ship_type', 'ship_flag'
