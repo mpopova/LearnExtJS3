@@ -11,5 +11,20 @@ Ext.define('LearnExt.view.main.MainController', {
         if (choice === 'yes') {
             //
         }
+    },
+
+    addRecord: function(sender, record){
+        this.windowAddShip = Ext.create('LearnExt.view.ships.ShipWindow');
+        // debugger;
+        var getGlobalVar =  LearnExt.Variables;
+        getGlobalVar.windowName = "addShip";
+
+        // getGlobalVar.windowName.setValue('addShip');
+
+        // Ext.get('windowName').setValue('addShip');
+
+        windowViewModel = this.windowAddShip.getViewModel();
+        this.windowAddShip.show();
     }
+
 });

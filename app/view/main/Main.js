@@ -25,7 +25,9 @@ Ext.define('LearnExt.view.main.Main', {
         'LearnExt.view.PanelForm',
         'LearnExt.view.TabPanel',
 
-        'LearnExt.view.simpsons.SimpsonList'
+        'LearnExt.view.simpsons.SimpsonList',
+
+        'LearnExt.Variables'
     ],
 
     controller: 'main',
@@ -73,9 +75,22 @@ Ext.define('LearnExt.view.main.Main', {
         {
             title: 'Ships',
             iconCls: 'fa-ship',
-            items: [{
-                xtype: 'shipList'
-            }]
+            items: [
+                {
+                    xtype: 'shipList'
+                },
+                {
+                    xtype: 'toolbar',
+                    docked: 'bottom',
+                    items: [{
+                        xtype: 'button',
+                        text: 'Add',
+                        id: 'addBtn',
+                        iconCls: 'x-fa fa-plus',
+                        handler: 'addRecord'
+                    }]
+                }
+            ]
         },
         {
             title: 'Simpsons',

@@ -33,8 +33,20 @@ Ext.define('LearnExt.view.ships.ShipWindowController', {
         // var shipsStoreOtherWay  = Ext.data.StoreManager.lookup('shipsStore');
 
         dataForUpdate = this.getViewModel().data; //object
-        console.log(dataForUpdate);
-        QueryDatabase.updateShips(dataForUpdate);
+
+        var getGlobalVar =  LearnExt.Variables;
+        // console.log(getGlobalVar.windowName);
+        // debugger;
+        // console.log(sender);
+        // console.log(sender.up()); //addBtn
+
+        if(getGlobalVar.windowName == 'addShip'){
+            QueryDatabase.addShips(dataForUpdate);
+            getGlobalVar.windowName = '';
+        }
+        else{
+            QueryDatabase.updateShips(dataForUpdate);
+        }
 
         shipsStore.load();
 

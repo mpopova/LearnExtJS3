@@ -15,13 +15,13 @@ Ext.define('LearnExt.view.ships.ShipWindow', {
 
     items: [{
         xtype: 'textfield',
-        id: 'shipName',
+        // id: 'shipName',
         name: 'ship_name',
         fieldLabel: 'Name of ship',
         bind: '{shipName}'
     }, {
         xtype: 'textfield',
-        id: 'shipType',
+        // id: 'shipType',
         name: 'ship_type',
         fieldLabel: 'Type of ship',
         bind: '{shipType}'
