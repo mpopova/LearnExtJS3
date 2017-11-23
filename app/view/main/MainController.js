@@ -14,7 +14,7 @@ Ext.define('LearnExt.view.main.MainController', {
     },
 
     addRecord: function(sender, record){
-        this.windowAddShip = Ext.create('LearnExt.view.ships.ShipWindow');
+        this.windowAddShip = Ext.create('LearnExt.view.ships.ShipWindow', {action: 'add'});
         // debugger;
         var getGlobalVar =  LearnExt.Variables;
         getGlobalVar.windowName = "addShip";

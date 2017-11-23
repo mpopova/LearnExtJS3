@@ -28,8 +28,11 @@ Ext.define('LearnExt.view.ships.ShipWindowController', {
     // },
 
     submitUpdate: function (sender, record) {
+        var window,
+            shipsStore;
 
-        var shipsStore = Ext.getStore('shipsStore');
+        shipsStore = Ext.getStore('shipsStore');
+        window =  sender.up('window[name=shipWindow]');
         // var shipsStoreOtherWay  = Ext.data.StoreManager.lookup('shipsStore');
 
         dataForUpdate = this.getViewModel().data; //object
@@ -40,17 +43,15 @@ Ext.define('LearnExt.view.ships.ShipWindowController', {
         // console.log(sender);
         // console.log(sender.up()); //addBtn
 
-        if(getGlobalVar.windowName == 'addShip'){
+        if(window.action == 'add'){
             QueryDatabase.addShips(dataForUpdate);
-            getGlobalVar.windowName = '';
         }
         else{
             QueryDatabase.updateShips(dataForUpdate);
         }
 
         shipsStore.load();
-
-        sender.up('window[name=shipWindow]').close();
+        window.close();
     }
 
 });
