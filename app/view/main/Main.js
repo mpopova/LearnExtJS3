@@ -77,9 +77,6 @@ Ext.define('LearnExt.view.main.Main', {
             iconCls: 'fa-ship',
             items: [
                 {
-                    xtype: 'shipList'
-                },
-                {
                     xtype: 'toolbar',
                     docked: 'bottom',
                     items: [{
@@ -88,7 +85,18 @@ Ext.define('LearnExt.view.main.Main', {
                         id: 'addBtn',
                         iconCls: 'x-fa fa-plus',
                         handler: 'addRecord'
-                    }]
+                    },
+                    {
+                        xtype: 'button',
+                        text: 'Delete',
+                        id: 'deleteBtn',
+                        iconCls: 'x-fa fa-remove',
+                        handler: 'deleteRecord'
+                    }
+                    ]
+                },
+                {
+                    xtype: 'shipList'
                 }
             ]
         },

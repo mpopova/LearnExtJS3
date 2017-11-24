@@ -2,6 +2,7 @@ Ext.define('LearnExt.view.ships.ShipsList', {
     extend: 'Ext.grid.Panel',
     xtype: 'shipList',
     controller: 'windowShip',
+    id: 'shipGrid',
     requires: [
         'LearnExt.store.Ship'
     ],
