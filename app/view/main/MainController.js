@@ -19,7 +19,6 @@ Ext.define('LearnExt.view.main.MainController', {
     },
 
     deleteRecord: function(sender, record){
-        debugger
         var grid,
             selection,
             selectedRow,

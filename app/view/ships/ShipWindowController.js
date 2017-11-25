@@ -11,7 +11,7 @@ Ext.define('LearnExt.view.ships.ShipWindowController', {
 
         this.windowShip = Ext.create('LearnExt.view.ships.ShipWindow');
 
-        windowViewModel = this.windowShip.c;
+        windowViewModel = this.windowShip.getViewModel();
         windowViewModel.set('shipName', record1.ship_name);
         windowViewModel.set('shipType', record1.ship_type);
         windowViewModel.set('shipId', record1.ship_id);
@@ -34,7 +34,7 @@ Ext.define('LearnExt.view.ships.ShipWindowController', {
             dataForAdd,
             shipNameValue,
             shipTypeValue;
-        debugger;
+
         shipsStore = Ext.getStore('shipsStore');
         window =  sender.up('window[name=shipWindow]');
         // var shipsStoreOtherWay  = Ext.data.StoreManager.lookup('shipsStore');
