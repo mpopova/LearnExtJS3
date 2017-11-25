@@ -14,12 +14,7 @@ Ext.define('LearnExt.view.main.MainController', {
     },
 
     addRecord: function(sender, record){
-        this.windowAddShip = Ext.create('LearnExt.view.ships.ShipWindow', {action: 'add'});
-        // debugger;
-        // var getGlobalVar =  LearnExt.Variables;
-        // getGlobalVar.windowName = "addShip";
-
-        // windowViewModel = this.windowAddShip.getViewModel();
+        this.windowAddShip = Ext.create('LearnExt.view.ships.ShipWindow', {action: 'add', title: 'Add record'});
         this.windowAddShip.show();
     },
 
@@ -36,7 +31,8 @@ Ext.define('LearnExt.view.main.MainController', {
         rowToDelete = selectedRow.data;
 
         QueryDatabase.deleteShips(rowToDelete);
-
+        shipsStore = Ext.getStore('shipsStore');
+        shipsStore.load();
     }
 
 });

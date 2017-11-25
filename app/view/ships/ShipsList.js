@@ -3,6 +3,8 @@ Ext.define('LearnExt.view.ships.ShipsList', {
     xtype: 'shipList',
     controller: 'windowShip',
     id: 'shipGrid',
+    scrollable: true,
+    
     requires: [
         'LearnExt.store.Ship'
     ],

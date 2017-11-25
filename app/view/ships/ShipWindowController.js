@@ -11,7 +11,7 @@ Ext.define('LearnExt.view.ships.ShipWindowController', {
 
         this.windowShip = Ext.create('LearnExt.view.ships.ShipWindow');
 
-        windowViewModel = this.windowShip.getViewModel();
+        windowViewModel = this.windowShip.c;
         windowViewModel.set('shipName', record1.ship_name);
         windowViewModel.set('shipType', record1.ship_type);
         windowViewModel.set('shipId', record1.ship_id);
@@ -29,22 +29,28 @@ Ext.define('LearnExt.view.ships.ShipWindowController', {
 
     submitUpdate: function (sender, record) {
         var window,
-            shipsStore;
-
+            shipsStore,
+            dataForUpdate,
+            dataForAdd,
+            shipNameValue,
+            shipTypeValue;
+        debugger;
         shipsStore = Ext.getStore('shipsStore');
         window =  sender.up('window[name=shipWindow]');
         // var shipsStoreOtherWay  = Ext.data.StoreManager.lookup('shipsStore');
 
         dataForUpdate = this.getViewModel().data; //object
 
-        var getGlobalVar =  LearnExt.Variables;
-        // console.log(getGlobalVar.windowName);
-        // debugger;
-        // console.log(sender);
-        // console.log(sender.up()); //addBtn
+        shipNameValue = Ext.getCmp('shipName').getValue();
+        shipTypeValue = Ext.getCmp('shipType').getValue();
+
+        dataForAdd = {
+            shipName: shipNameValue,
+            shipType: shipTypeValue
+        };
 
         if(window.action == 'add'){
-            QueryDatabase.addShips(dataForUpdate);
+            QueryDatabase.addShips(dataForAdd);
         }
         else{
             QueryDatabase.updateShips(dataForUpdate);
